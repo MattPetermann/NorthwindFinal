@@ -1,0 +1,247 @@
+﻿@using Northwind.Models
+@{
+	ViewBag.Title = "Order";
+}
+
+<table class="table table-bordered table-hover">
+	<thead>
+		<th style="width:70%">Product Name</th>
+		<th style="width:10%" class="right-align">Unit</th>
+		<th style="width:10%" class="right-align">Quantity</th>
+		<th style="width:10%" class="right-align">Total</th>
+	</thead>
+	<tbody>
+		@foreach (Product p in Inventory.GetInventory())
+		{
+			<tr>
+				<td>@p.Name</td>
+				<td class="right-align">$@p.Price.ToString("#,###.00")</td>
+				<td class="right-align">
+					<input type="number" class="form-control form-control-sm edit" value=0 min=0 step=1 data-item=@p.Id data-edit="#row_@p.Id" />
+				</td>
+				<th class="right-align">$<span id="row_@p.Id" class="row-total" data-value="0">0.00</span></th>
+			</tr>
+		}
+		<tr>
+			<th class="right-align">Total:</th>
+			<th></th>
+			<th></th>
+			<th class="right-align">$<span id="col-total">0.00</span></th>
+		</tr>
+	</tbody>
+</table>
+
+<button class="btn btn-primary" id="checkout" disabled>
+	<span class="fa fa-shopping-cart"></span> Checkout
+</button>
+
+<div class="modal fade" id="personalInfo">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Order Confirmation</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-warning">
+					By submitting your information, you are agreeing to pay in full, <strong>$<span id="billTotal"></span></strong>.
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<select class="custom-select">
+							<option>Mr.</option>
+							<option>Miss</option>
+							<option>Mrs.</option>
+							<option>Ms.</option>
+						</select>
+					</div>
+					<input type="text" class="form-control required" placeholder="First" required>
+					<input type="text" class="form-control required" placeholder="Last" required>
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend"><div class="input-group-text">Ship to</div></div>
+					<input type="text" class="form-control required" placeholder="Street Address" required>
+				</div>
+				<div class="input-group mb-3">
+					<input type="text" class="form-control required" placeholder="City" required>
+					<input type="text" class="form-control required" placeholder="State" required>
+					<input type="text" class="form-control required" placeholder="Zip" required>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="btn-group">
+					<button type="button" class="btn btn-success" id="place-order"><span class="fa fa-money"></span> Submit</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="orderSuccess" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Success!</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-success">
+					<p>Your order has been received and will be shipped shortly!</p>
+					<p>Your confirmation number is <strong>#000984366</strong>.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" data-dismiss="modal">Okay</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section scripts {
+<script>
+		$(function(){
+			//On change of the quantity fields
+			$('.edit').on('change', function(){
+				//Validate inputs
+				if($(this).val() < 0)
+					$(this).val(0);
+				if($(this).val() % 1 != 0)
+					$(this).val(Math.round($(this).val()));
+				if(isNaN($(this).val()))
+					$(this).val(0);
+				if($(this).val() == "")
+					$(this).val(0);
+
+				//Update row totals
+				var rowTotal = ($(this).val() * findInInventory($(this).data('item'))).toFixed(2);
+				$($(this).data('edit')).text(rowTotal);
+				$($(this).data('edit')).data('value', rowTotal);
+
+				//Update column total
+				var colTotal = 0;
+				$('.row-total').each(function() {
+					colTotal += parseFloat($(this).data('value'));
+				})
+
+				//Update view
+				$('#col-total').text(colTotal.toFixed(2));
+				$('#billTotal').text(colTotal.toFixed(2));
+
+				//Enable/disable button
+				if(colTotal == 0)
+					$('#checkout').prop('disabled', true);
+				else
+					$('#checkout').prop('disabled', false);
+			});
+
+			//On click of checkout button
+			$('#checkout').on('click', function() {
+				//Track how many items are present
+				var itemSum = 0;
+
+				//Loop over quantity fields
+				$('.edit').each(function(){
+					//Validate entries again
+					if($(this).val() < 0)
+						$(this).val(0);
+					if($(this).val() % 1 != 0)
+						$(this).val(Math.round($(this).val()));
+					if(isNaN($(this).val()))
+						$(this).val(0);
+					itemSum += $(this).val();
+
+					//Update row columns again
+					var rowTotal = ($(this).val() * findInInventory($(this).data('item'))).toFixed(2);
+					$($(this).data('edit')).text(rowTotal);
+					$($(this).data('edit')).data('value', rowTotal);
+				});
+
+				//Update column total again
+				var colTotal = 0;
+				$('.row-total').each(function() {
+					colTotal += parseFloat($(this).data('value'));
+				});
+				colTotal = colTotal.toFixed(2);
+
+				//Update view again
+				$('#col-total').text(colTotal);
+				$('#billTotal').text(colTotal);
+
+				//If there are items select, show the confirmation modal
+				if(itemSum != 0)
+					$('#personalInfo').modal('toggle');
+			});
+
+			//On required field lost focus
+			$('.required').on('focusout', function() {
+				//If column is empty or white space highlight red
+				if($(this).val().trim() == "")
+					$(this).addClass('alert alert-danger');
+				//Else return to normal
+				else
+					$(this).removeClass('alert alert-danger');
+			});
+
+			//On click of submit order button
+			$('#place-order').on('click', function() {
+				//Check if the order is submittable
+				var submittable = true;
+
+				//Loop over required fields
+				$('.required').each(function(){
+					//If field is whitespace or empty highlight red
+					//Not submittable
+					if($(this).val().trim() == "") {
+						$(this).addClass('alert alert-danger');
+						submittable = false;
+					}
+				});
+
+				//If the form is submittable
+				if(submittable) {
+					//Hide confirmation modal and show success window
+					$('#personalInfo').modal('toggle');
+					$('#orderSuccess').modal('toggle');
+
+					//Reset quantity fields and update rows
+					$('.edit').each(function(){
+						$(this).val(0);
+						var rowTotal = ($(this).val() * findInInventory($(this).data('item'))).toFixed(2);
+						$($(this).data('edit')).text(rowTotal);
+						$($(this).data('edit')).data('value', rowTotal);
+					});
+
+					//Rest column
+					var colTotal = 0;
+					$('.row-total').each(function() {
+						colTotal += parseFloat($(this).data('value'));
+					});
+					colTotal = colTotal.toFixed(2);
+
+					//Reset view
+					$('#col-total').text(colTotal);
+					$('#billTotal').text(colTotal);
+				}
+			});
+		});
+
+		//Search the inventory for an item with a given id
+		function findInInventory(id) {
+			//Get the id in a raw format and parse it into a json object
+			var raw = "@Inventory.GetIdList()";
+			var json = JSON.parse(raw.replace(/&quot;/g, "\""));
+
+			//Set return value to -1 by default
+			var ret = -1;
+			json.arr.forEach(function(item){
+				//If the id is found, set the return value to the id's price
+				if(item.id == id)
+					ret = item.price;
+			});
+
+			//Return either a default or price value
+			return ret;
+		}
+</script>
+}

@@ -1,0 +1,25 @@
+﻿@using Northwind.Models
+@{
+	ViewBag.Title = "Home";
+}
+
+<h2><a href=@Url.Action("Order", "Home") class="btn btn-primary" id="place-order">Place Your Order Now <span class="fa fa-angle-double-right"></span></a></h2>
+
+<div class="row">
+	@foreach (Product product in Inventory.GetInventory())
+	{
+		<div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-3">
+			<div class="card product-card">
+				<img class="card-img-top" src=@product.ImgUrl>
+				<div class="card-body">
+					<h4 class="card-title">@product.Name</h4>
+					<h4 class="text-secondary">
+						<span class="strikethrough">$@((product.Price*1.15).ToString("#,###.00"))</span>
+						<span> $@(product.Price.ToString("#,###.00"))</span>
+					</h4>
+					<p class="card-text">@product.Description.Substring(0, product.Description.IndexOf('.') + 1)</p>
+				</div>
+			</div>
+		</div>
+	}
+</div>

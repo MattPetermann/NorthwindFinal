@@ -1,0 +1,45 @@
+﻿body {
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.display-1 {
+    text-align: center;
+}
+
+.card-img-top {
+	height: 20vw;
+	object-fit: scale-down;
+	width: 100%;
+}
+
+.fixed-top {
+	box-shadow: gray 0 5px 20px 0;
+}
+
+.product-card {
+	height: 100%;
+}
+
+.right-align {
+	text-align: right;
+}
+
+.strikethrough {
+	text-decoration: line-through;
+}
+
+#checkout {
+	display: table;
+	margin-left: auto;
+}
+
+#place-order {
+	display: table;
+	margin: auto;
+}
