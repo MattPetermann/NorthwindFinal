@@ -93,3 +93,15 @@ C:\Users\mattp\Desktop\net-web\Lesson 26\FormData.DataLayer\obj\Debug\FormData.D
 C:\Users\mattp\Desktop\net-web\Lesson 26\FormData.DataLayer\obj\Debug\FormData.DataLayer.csproj.CopyComplete
 C:\Users\mattp\Desktop\net-web\Lesson 26\FormData.DataLayer\obj\Debug\FormData.DataLayer.dll
 C:\Users\mattp\Desktop\net-web\Lesson 26\FormData.DataLayer\obj\Debug\FormData.DataLayer.pdb
+C:\Users\washi\source\repos\Unit 3\Final Project\NorthwindFinal\Lesson 26\FormData.DataLayer\bin\Debug\FormData.DataLayer.dll.config
+C:\Users\washi\source\repos\Unit 3\Final Project\NorthwindFinal\Lesson 26\FormData.DataLayer\bin\Debug\FormData.DataLayer.dll
+C:\Users\washi\source\repos\Unit 3\Final Project\NorthwindFinal\Lesson 26\FormData.DataLayer\bin\Debug\FormData.DataLayer.pdb
+C:\Users\washi\source\repos\Unit 3\Final Project\NorthwindFinal\Lesson 26\FormData.DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\washi\source\repos\Unit 3\Final Project\NorthwindFinal\Lesson 26\FormData.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\washi\source\repos\Unit 3\Final Project\NorthwindFinal\Lesson 26\FormData.DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\washi\source\repos\Unit 3\Final Project\NorthwindFinal\Lesson 26\FormData.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\washi\source\repos\Unit 3\Final Project\NorthwindFinal\Lesson 26\FormData.DataLayer\obj\Debug\FormData.DataLayer.csprojAssemblyReference.cache
+C:\Users\washi\source\repos\Unit 3\Final Project\NorthwindFinal\Lesson 26\FormData.DataLayer\obj\Debug\FormData.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\washi\source\repos\Unit 3\Final Project\NorthwindFinal\Lesson 26\FormData.DataLayer\obj\Debug\FormData.DataLayer.csproj.CopyComplete
+C:\Users\washi\source\repos\Unit 3\Final Project\NorthwindFinal\Lesson 26\FormData.DataLayer\obj\Debug\FormData.DataLayer.dll
+C:\Users\washi\source\repos\Unit 3\Final Project\NorthwindFinal\Lesson 26\FormData.DataLayer\obj\Debug\FormData.DataLayer.pdb
