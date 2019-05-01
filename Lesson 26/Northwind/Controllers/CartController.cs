@@ -19,6 +19,11 @@ namespace Northwind.Controllers
             return Json("{ Greeting: Hi }", JsonRequestBehavior.AllowGet);
         }
 
+		public ActionResult ViewCart()
+		{
+			return View();
+		}
+
         // POST: Cart/AddToCart
         [HttpPost]
         public JsonResult AddToCart(CartDTO cartDTO)
