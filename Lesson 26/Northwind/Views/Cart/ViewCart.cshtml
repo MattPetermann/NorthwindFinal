@@ -1,5 +1,6 @@
 ﻿@{
 	ViewBag.Title = "ViewCart";
+	int CustomerID = Request.IsAuthenticated ? Convert.ToInt32(User.Identity.Name) : -1;
 }
 
 <h2>ViewCart</h2>
@@ -21,22 +22,22 @@
 @section scripts
 {
 	<script>
-		var cartItems = [
-			{name: "food item", qty: 3},
-			{name: "furniture piece", qty: 2},
-			{name: "coffee", qty: 1},
-		];
-
 		$(function () {
-			$.map(cartItems, function (item) {
-				$('#list').append(
-					'<tr>' +
+			$.post("@Url.Content("~")Cart/ViewCart", { CustomerID: @CustomerID}, function (response) {
+				console.log(response);
+
+				/*
+				$.map(response, function (item) {
+					$('#list').append(
+						'<tr>' +
 						'<td>' + item.name + '</td>' +
 						'<td>' + item.qty + '</td>' +
 						'<td>X</td>' +
-					'</tr>'
-				);
-			});
+						'</tr>'
+					);
+				});
+				*/
+			}, "json");			
 		});
 	</script>
 }

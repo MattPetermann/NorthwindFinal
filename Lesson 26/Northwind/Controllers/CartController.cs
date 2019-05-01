@@ -54,14 +54,24 @@ namespace Northwind.Controllers
             }
         }
 
-		[HttpPost]
 		// POST: Cart/ViewCart
-		public List<Cart> ViewCart(CartDTO cartDTO)
+		[HttpPost]
+		public JsonResult ViewCart(CartDTO cartDTO)
 		{
+			Cart sc = new Cart();
+			sc.CustomerID = cartDTO.CustomerID;
+
 			using (NorthwndEntities db = new NorthwndEntities())
 			{
-				return db.Carts.Where(c => c.ProductID == cartDTO.ProductID
-						&& c.CustomerID == cartDTO.CustomerID).ToList();
+				var carts = db.Carts.Where(c => c.CustomerID == cartDTO.CustomerID).Select(
+					c => new
+					{
+						//Change to qty and product id vs product table
+						c.CustomerID,
+						c.CartID
+					}).ToList();
+
+				return Json(carts, JsonRequestBehavior.AllowGet);
 			}
 		}
 
