@@ -19,11 +19,6 @@ namespace Northwind.Controllers
             return Json("{ Greeting: Hi }", JsonRequestBehavior.AllowGet);
         }
 
-		public ActionResult ViewCart()
-		{
-			return View();
-		}
-
         // POST: Cart/AddToCart
         [HttpPost]
         public JsonResult AddToCart(CartDTO cartDTO)
@@ -58,5 +53,21 @@ namespace Northwind.Controllers
                 return Json(sc, JsonRequestBehavior.AllowGet);
             }
         }
-    }
+
+		[HttpPost]
+		// POST: Cart/ViewCart
+		public List<Cart> ViewCart(CartDTO cartDTO)
+		{
+			using (NorthwndEntities db = new NorthwndEntities())
+			{
+				return db.Carts.Where(c => c.ProductID == cartDTO.ProductID
+						&& c.CustomerID == cartDTO.CustomerID).ToList();
+			}
+		}
+
+		public ActionResult ViewCart()
+		{
+			return View();
+		}
+	}
 }
