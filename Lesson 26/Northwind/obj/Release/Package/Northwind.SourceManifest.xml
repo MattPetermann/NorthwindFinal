@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\obj\Release\Package\PackageTmp" />
+  <setAcl path="E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

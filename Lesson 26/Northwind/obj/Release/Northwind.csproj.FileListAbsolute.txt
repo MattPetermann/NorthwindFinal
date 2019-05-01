@@ -1,0 +1,88 @@
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\roslyn\csc.exe
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\roslyn\vbc.exe
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\roslyn\VBCSCompiler.exe
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\Northwind.dll.config
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\Northwind.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\Northwind.pdb
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\Antlr3.Runtime.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\EntityFramework.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\EntityFramework.SqlServer.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\Newtonsoft.Json.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.Helpers.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.Mvc.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.Optimization.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.Razor.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.WebPages.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.WebPages.Razor.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\WebGrease.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\EntityFramework.xml
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\EntityFramework.SqlServer.xml
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.Helpers.xml
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.Mvc.xml
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.Optimization.xml
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.Razor.xml
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.WebPages.xml
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\System.Web.WebPages.Razor.xml
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\Antlr3.Runtime.pdb
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\bin\Newtonsoft.Json.xml
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\obj\Release\Northwind.csprojResolveAssemblyReference.cache
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\obj\Release\Northwind.dll
+C:\Users\jgris\Documents\Visual Studio 2015\Projects\Northwind\Northwind\obj\Release\Northwind.pdb
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\roslyn\csc.exe
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\roslyn\System.Collections.Immutable.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\roslyn\System.Reflection.Metadata.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\roslyn\vbc.exe
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\roslyn\VBCSCompiler.exe
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\roslyn\VBCSCompiler.exe.config
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\Northwind.dll.config
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\Northwind.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\Northwind.pdb
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\Antlr3.Runtime.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\EntityFramework.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\EntityFramework.SqlServer.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\Microsoft.Web.Infrastructure.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\Newtonsoft.Json.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.Helpers.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.Mvc.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.Optimization.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.Razor.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.WebPages.Deployment.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.WebPages.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.WebPages.Razor.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\WebGrease.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\EntityFramework.xml
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\EntityFramework.SqlServer.xml
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.Helpers.xml
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.Mvc.xml
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.Optimization.xml
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.Razor.xml
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.WebPages.xml
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.WebPages.Deployment.xml
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\System.Web.WebPages.Razor.xml
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\Antlr3.Runtime.pdb
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\bin\Newtonsoft.Json.xml
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\obj\Release\Northwind.csprojResolveAssemblyReference.cache
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\obj\Release\Northwind.dll
+E:\WCTC\.Net Web Development 152-109-12128-17\Unit 4\Lesson 26\Northwind\obj\Release\Northwind.pdb

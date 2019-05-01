@@ -1,0 +1,33 @@
+    <tbody id="products">
+            <tr class="product-row" id="1">
+                <td><span id="name_1">Chai</span> (10 boxes x 20 bags)</td>
+                <td class="text-right">
+                    $<span id="price_1">18.00</span>
+                </td>
+                <td class="text-right">39</td>
+            </tr>
+
+var id = data[i].ProductID;
+var str = "<tr class='product-row' id='" + id + "'>";
+str += "<td><span id='name_" + id + "'>" + data[i].ProductName + "</span> (" +
+data[i].QuantityPerUnit + ")</td>";
+str += "<td class='text-right'>$<span id='price_" + id + "'>" +
+data[i].UnitPrice.toFixed(2) + "</span></td>";
+str += "<td class='text-right'>" + data[i].UnitsInStock + "</td>";
+str += "</tr>";
+
+<tr class="product-row" id="${data[i].ProductID}">
+	<td><span id="name_${data[i].ProductID}">${data[i].ProductName}</span> (${data[i].QuantityPerUnit})</td>
+	<td class="text-right">
+		$<span id="price_${data[i].ProductID}">${data[i].UnitPrice}</span>
+	</td>
+	<td class="text-right">${data[i].UnitsInStock}</td>
+</tr>
+
+<tr class="product-row" id="${data.ProductID}">
+	<td><span id="name_${data.ProductID}">${data.ProductName}</span> (${data.QuantityPerUnit})</td>
+	<td class="text-right">
+		<span id="price_${data.ProductID}">${data.UnitPrice}</span>
+	</td>
+	<td class="text-right">${data.UnitsInStock}</td>
+</tr>
