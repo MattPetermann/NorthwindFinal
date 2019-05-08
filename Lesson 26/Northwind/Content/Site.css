@@ -97,3 +97,20 @@ textarea {
 .pad-top {
     padding-top: 6px;
 }
+
+/* Checkout button */
+#checkout {
+	display: block;
+	margin-left: auto;
+}
+
+/* Delete buttons */
+.delete {
+	display: block;
+	margin: auto;
+}
+
+/* Hidden items */
+#complete, #return {
+	display: none;
+}

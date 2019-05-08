@@ -13,31 +13,70 @@
 			<th style="width: 10%">Remove</th>
 		</tr>
 	</thead>
-	<tbody id="list">
-		<tr>
-		</tr>
-	</tbody>
+	<tbody id="list"></tbody>
 </table>
+<button class="btn btn-success" id="checkout"><i class="fa fa-shopping-cart"></i> Checkout</button>
+<div id="complete" class="alert alert-success">Order complete!</div>
+<a class="btn btn-primary" id="return" href="~/Home/Index">Return Home</a>
 
 @section scripts
 {
 	<script>
 		$(function () {
+			//Populate table
 			$.post("@Url.Content("~")Cart/ViewCart", { CustomerID: @CustomerID}, function (response) {
-				console.log(response);
-
-				/*
 				$.map(response, function (item) {
 					$('#list').append(
-						'<tr>' +
-						'<td>' + item.name + '</td>' +
-						'<td>' + item.qty + '</td>' +
-						'<td>X</td>' +
+						'<tr id="' + item.ProductID + '">' +
+						'<td>' + item.ProductName + '</td>' +
+						'<td><input type="number" min="1" step="1" class="form-control edit" value="' + item.Quantity + '" data-id="' + item.ProductID + '" /></td>' +
+						'<td><button class="btn btn-danger delete" data-id="' + item.ProductID + '">X</button></td>' +
 						'</tr>'
 					);
 				});
-				*/
-			}, "json");			
+			}, "json");
+
+			//Update
+			$(document).on('change', '.edit', function () {
+				var id = $(this).data('id');
+				var qty = $(this).val();
+				
+				$.post("@Url.Content("~")Cart/EditCart",
+					{
+						CustomerID: @CustomerID,
+						ProductId: id,
+						Quantity:  qty
+					}
+				);
+			});
+
+			//Delete
+			$(document).on('click', '.delete', function () {
+				var id = $(this).data('id');
+
+				$.post("@Url.Content("~")Cart/DeleteCart",
+					{
+						CustomerID: @CustomerID,
+						ProductId: id
+					}
+				);
+
+				$('#' + $(this).data('id')).remove();
+			});
+
+			//Checkout
+			$('#checkout').on('click', function () {
+				$.post("@Url.Content("~")Cart/ClearCart",
+					{
+						CustomerID: @CustomerID
+					}
+				);
+
+				$('tr').remove();
+				$('#complete').show();
+				$('#checkout').hide();
+				$('#return').show();
+			});
 		});
 	</script>
 }
