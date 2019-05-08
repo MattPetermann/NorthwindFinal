@@ -153,7 +153,8 @@ namespace Northwind.Controllers
 						c.Quantity,
 						c.ProductID,
 						p.ProductName,
-						p.UnitPrice
+						p.UnitPrice,
+						p.Discounts.FirstOrDefault().DiscountPercent
 					}).ToList();
 
 				return Json(carts, JsonRequestBehavior.AllowGet);

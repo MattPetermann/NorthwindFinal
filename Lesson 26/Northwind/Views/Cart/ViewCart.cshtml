@@ -8,7 +8,8 @@
 <table class="table table-striped table-bordered">
 	<thead>
 		<tr>
-			<th style="width: 70%">Item Name</th>
+			<th style="width: 60%">Item Name</th>
+			<th style="width: 10%">Discount</th>
 			<th style="width: 10%">Quantity</th>
 			<th style="width: 10%">Price</th>
 			<th style="width: 10%">Remove</th>
@@ -18,6 +19,7 @@
 	<tfoot>
 		<tr>
 			<td><b>Total</b></td>
+			<td></td>
 			<td></td>
 			<td class="price" id="total"></td>
 			<td></td>
@@ -35,11 +37,13 @@
 			//Populate table
 			$.post("@Url.Content("~")Cart/ViewCart", { CustomerID: @CustomerID}, function (response) {
 				$.map(response, function (item) {
+					item.DiscountPercent = item.DiscountPercent == null ? 0 : item.DiscountPercent;
 					$('#list').append(
 						'<tr class="item" id="' + item.ProductID + '">' +
 						'<td>' + item.ProductName + '</td>' +
+						'<td class="discount">' + item.DiscountPercent + '</td>' +
 						'<td><input type="number" min="1" step="1" class="form-control edit" value="' + item.Quantity + '" data-id="' + item.ProductID + '" /></td>' +
-						'<td class="price" id="row_' + item.ProductID + '">$' +  (item.Quantity * item.UnitPrice).toFixed(2)  + '</td>' +
+						'<td class="price" id="row_' + item.ProductID + '">$' +  (item.Quantity * item.UnitPrice * (1 - item.DiscountPercent)).toFixed(2)  + '</td>' +
 						'<td><button class="btn btn-danger delete" data-id="' + item.ProductID + '">X</button></td>' +
 						'</tr>'
 					);
@@ -51,6 +55,7 @@
 			$(document).on('change', '.edit', function () {
 				var id = $(this).data('id');
 				var qty = $(this).val();
+				var item = $(this);
 				
 				$.post("@Url.Content("~")Cart/EditCart",
 					{
@@ -59,7 +64,8 @@
 						Quantity: qty
 					}
 				).then(function (response) {
-					$('#row_' + id).html('$' + (response * qty).toFixed(2));
+					var discount = Number(item.closest('.item').find('.discount').html());
+					$('#row_' + id).html('$' + (response * qty * Number(1 - discount)).toFixed(2));
 					sumRows();
 				});
 			});
