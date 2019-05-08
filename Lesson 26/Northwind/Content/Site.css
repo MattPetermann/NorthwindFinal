@@ -114,3 +114,8 @@ textarea {
 #complete, #return {
 	display: none;
 }
+
+/* Row total */
+.price {
+	text-align: right;
+}

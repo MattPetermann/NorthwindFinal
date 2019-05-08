@@ -133,7 +133,7 @@ namespace Northwind.Controllers
                 }
 
                 db.SaveChanges();
-                return Json(sc, JsonRequestBehavior.AllowGet);
+                return Json(cart.Product.UnitPrice, JsonRequestBehavior.AllowGet);
             }
         }
 
@@ -152,7 +152,8 @@ namespace Northwind.Controllers
 					{
 						c.Quantity,
 						c.ProductID,
-						p.ProductName
+						p.ProductName,
+						p.UnitPrice
 					}).ToList();
 
 				return Json(carts, JsonRequestBehavior.AllowGet);
